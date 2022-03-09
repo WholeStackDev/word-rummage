@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  margin-top: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.letterBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-left: 3px;
+  margin-right: 3px;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.letterAbsent {
+  background-color: rgb(120, 124, 126);
+}
+
+.letterMisplaced {
+  background-color: rgb(201, 180, 88);
+}
+
+.letterCorrect {
+  background-color: rgb(106, 170, 100);
+}
