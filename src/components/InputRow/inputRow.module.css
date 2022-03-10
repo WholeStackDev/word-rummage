@@ -20,19 +20,19 @@
   color: white;
 }
 
-.letterAbsent {
+.absent {
   background-color: rgb(120, 124, 126);
 }
 
-.letterMisplaced {
+.misplaced {
   background-color: rgb(201, 180, 88);
 }
 
-.letterCorrect {
+.correct {
   background-color: rgb(106, 170, 100);
 }
 
-.letterEmpty {
+.empty {
   border: 2px solid rgb(221, 214, 218);
   width: 58px;
   height: 58px;

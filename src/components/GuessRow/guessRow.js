@@ -3,11 +3,11 @@ import styles from "./guessRow.module.css";
 const GuessRow = () => {
   return (
     <div className={styles.container}>
-      <div className={`${styles.letterBox} ${styles.letterAbsent}`}>T</div>
-      <div className={`${styles.letterBox} ${styles.letterMisplaced}`}>E</div>
-      <div className={`${styles.letterBox} ${styles.letterCorrect}`}>S</div>
-      <div className={`${styles.letterBox} ${styles.letterAbsent}`}>T</div>
-      <div className={`${styles.letterBox} ${styles.letterAbsent}`}>S</div>
+      <div className={`${styles.letterBox} ${styles.absent}`}>T</div>
+      <div className={`${styles.letterBox} ${styles.misplaced}`}>E</div>
+      <div className={`${styles.letterBox} ${styles.correct}`}>S</div>
+      <div className={`${styles.letterBox} ${styles.absent}`}>T</div>
+      <div className={`${styles.letterBox} ${styles.absent}`}>S</div>
     </div>
   );
 };
