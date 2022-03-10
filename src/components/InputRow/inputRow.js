@@ -14,16 +14,20 @@ const InputRow = (props) => {
         setInput(() => newInputArray);
       } else if (e.keyCode === 13 && inputRef.current.length === 5) {
         props.handleGuess(inputRef.current);
-      } else if (inputRef.current.length < 5) {
+      } else if (inputRef.current.length < 5 && e.keyCode > 64 && e.keyCode < 91) {
         setInput((prev) => [...prev, e.key.toUpperCase()]);
       }
     }
-    document.addEventListener("keydown", handleKeyDown);
+    if(props.active) {
+      document.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.removeEventListener("keydown", handleKeyDown);
+    }
 
     return function cleanup() {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [props]);
 
   return (
     <>
