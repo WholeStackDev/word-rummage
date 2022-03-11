@@ -38,3 +38,18 @@
   height: 58px;
   color: black;
 }
+
+.filled {
+  border-color: #777;
+  animation-duration: .15s;
+  animation-name: growShrink;
+}
+@keyframes growShrink {
+  from {
+    transform: scale(1);
+  }
+  
+  to {
+    transform: scale(1.1);
+  }
+}
