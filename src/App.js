@@ -26,15 +26,14 @@ const App = () => {
     setActiveRow((prev) => prev+1); 
   };
 
+  const rowArr = [...Array(6).keys()];
+
   return (
     <div className="App">
-      <InputRow handleGuess={handleGuess} rowColors={rowColors[0]} active={activeRow === 0 ? true : false} />
-      <InputRow handleGuess={handleGuess} rowColors={rowColors[1]} active={activeRow === 1 ? true : false}/>
-      <InputRow handleGuess={handleGuess} rowColors={rowColors[2]} active={activeRow === 2 ? true : false}/>
-      <InputRow handleGuess={handleGuess} rowColors={rowColors[3]} active={activeRow === 3 ? true : false}/>
-      <InputRow handleGuess={handleGuess} rowColors={rowColors[4]} active={activeRow === 4 ? true : false}/>
-      <InputRow handleGuess={handleGuess} rowColors={rowColors[5]} active={activeRow === 5 ? true : false}/>
-    </div>
+      {rowArr.map((row)=>(
+      <InputRow key={row} handleGuess={handleGuess} rowColors={rowColors[row]} active={activeRow === row ? true : false} />
+      ))}
+    </div>      
   );
 };
 
