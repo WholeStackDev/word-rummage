@@ -18,7 +18,7 @@ const InputRow = (props) => {
         setInput((prev) => [...prev, e.key.toUpperCase()]);
       }
     }
-    if(props.active) {
+    if (props.active) {
       document.addEventListener("keydown", handleKeyDown);
     } else {
       document.removeEventListener("keydown", handleKeyDown);
@@ -32,11 +32,11 @@ const InputRow = (props) => {
   return (
     <>
       <div className={styles.container}>
-        <div className={`${styles.letterBox} ${styles[props.rowColors[0]]} ${inputRef.current.length > 0 ? styles.filled : ''}`}>{input[0]}</div>
-        <div className={`${styles.letterBox} ${styles[props.rowColors[1]]} ${inputRef.current.length > 1 ? styles.filled : ''}`}>{input[1]}</div>
-        <div className={`${styles.letterBox} ${styles[props.rowColors[2]]} ${inputRef.current.length > 2 ? styles.filled : ''}`}>{input[2]}</div>
-        <div className={`${styles.letterBox} ${styles[props.rowColors[3]]} ${inputRef.current.length > 3 ? styles.filled : ''}`}>{input[3]}</div>
-        <div className={`${styles.letterBox} ${styles[props.rowColors[4]]} ${inputRef.current.length > 4 ? styles.filled : ''}`}>{input[4]}</div>
+        <div className={`${styles.letterBox} ${styles[props.rowColors[0]]} ${inputRef.current.length > 0 ? styles.filled : ""}`}>{input[0]}</div>
+        <div className={`${styles.letterBox} ${styles[props.rowColors[1]]} ${inputRef.current.length > 1 ? styles.filled : ""}`}>{input[1]}</div>
+        <div className={`${styles.letterBox} ${styles[props.rowColors[2]]} ${inputRef.current.length > 2 ? styles.filled : ""}`}>{input[2]}</div>
+        <div className={`${styles.letterBox} ${styles[props.rowColors[3]]} ${inputRef.current.length > 3 ? styles.filled : ""}`}>{input[3]}</div>
+        <div className={`${styles.letterBox} ${styles[props.rowColors[4]]} ${inputRef.current.length > 4 ? styles.filled : ""}`}>{input[4]}</div>
       </div>
     </>
   );

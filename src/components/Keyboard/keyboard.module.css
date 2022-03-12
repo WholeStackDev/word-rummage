@@ -1,28 +1,40 @@
 .keyboard {
-display: flex;
-flex-direction: column;
-justify-content: center;    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .keyRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .key {
-border-radius: 4px;
-background-color: rgb(211,214,218);
-margin: 3px;
-height: 58px;
-width: 43px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
-cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(211, 214, 218);
+  margin: 3px;
+  height: 58px;
+  width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .keyWide {
-    width: 65px;
-    }
+  width: 65px;
+}
+
+.absent {
+  background-color: rgb(120, 124, 126);
+}
+
+.misplaced {
+  background-color: rgb(201, 180, 88);
+}
+
+.correct {
+  background-color: rgb(106, 170, 100);
+}
