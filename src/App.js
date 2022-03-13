@@ -45,6 +45,7 @@ const App = () => {
   const handleGuess = (guess) => {
     if (!wordList.includes(guess.join("").toLowerCase())) {
       alert("Not a word dummy.");
+
       return;
     }
 
@@ -83,6 +84,11 @@ const App = () => {
     newRowColorsArray[activeRow] = newColors;
     setRowColors(() => newRowColorsArray);
     setActiveRow((prev) => prev + 1);
+    if (guess.join("") === answer.join("")) {
+      alert("Congratulations! You correctly answered: " + answer.join("") + "!");
+    } else if (activeRow === 5) {
+      alert("You failed! You are terrible at life! The answer was: " + answer.join("") + "!");
+    }
   };
 
   const rowArr = [...Array(numRows).keys()];
@@ -96,6 +102,7 @@ const App = () => {
         ))}
       </div>
       <Keyboard keyStatus={keyStatus} />
+      <h1 style={{ color: "white" }}>{answer}</h1>
     </div>
   );
 };
