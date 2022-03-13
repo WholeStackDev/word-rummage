@@ -2,11 +2,13 @@ import "./App.css";
 import InputRow from "./components/InputRow/inputRow";
 import { useState, useEffect } from "react";
 import Keyboard from "./components/Keyboard/keyboard";
-const wordListJson = require("./words.json");
+const possibleAnswerWordsJson = require("./possibleAnswerWords.json");
+const permittedWordsJson = require("./permittedWords.json");
 
 const App = () => {
-  var wordList = wordListJson.data;
-  const word = wordList[Math.floor(Math.random() * wordList.length) + 1];
+  var possibleAnswers = possibleAnswerWordsJson.data;
+  var permittedWords = permittedWordsJson.data;
+  const word = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length) + 1];
 
   const [answer, setAnswer] = useState(word.toUpperCase().split(""));
   let numRows = 6;
@@ -43,8 +45,8 @@ const App = () => {
   });
 
   const handleGuess = (guess) => {
-    if (!wordList.includes(guess.join("").toLowerCase())) {
-      alert("Not a word dummy.");
+    if (!permittedWords.includes(guess.join("").toLowerCase())) {
+      alert("I'm sorry, that's not a real word.");
 
       return;
     }
@@ -85,9 +87,9 @@ const App = () => {
     setRowColors(() => newRowColorsArray);
     setActiveRow((prev) => prev + 1);
     if (guess.join("") === answer.join("")) {
-      alert("Congratulations! You correctly answered: " + answer.join("") + "!");
+      alert("Congratulations! You correctly answered: " + answer.join("") + "! Refresh for a new word.");
     } else if (activeRow === 5) {
-      alert("You failed! You are terrible at life! The answer was: " + answer.join("") + "!");
+      alert("You failed! You are terrible at life! The answer was: " + answer.join("") + "!  Refresh for a new word.");
     }
   };
 
