@@ -33,7 +33,7 @@
 }
 
 .empty {
-  border: 2px solid rgb(221, 214, 218);
+  border: 2px solid rgb(211, 214, 218);
   width: 58px;
   height: 58px;
   color: black;
@@ -41,14 +41,14 @@
 
 .filled {
   border-color: #777;
-  animation-duration: .15s;
+  animation-duration: 0.15s;
   animation-name: growShrink;
 }
 @keyframes growShrink {
   from {
     transform: scale(1);
   }
-  
+
   to {
     transform: scale(1.1);
   }

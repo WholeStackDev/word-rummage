@@ -1,7 +1,9 @@
 import "./App.css";
 import InputRow from "./components/InputRow/inputRow";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Keyboard from "./components/Keyboard/keyboard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfinity } from "@fortawesome/free-solid-svg-icons";
 const possibleAnswerWordsJson = require("./possibleAnswerWords.json");
 const permittedWordsJson = require("./permittedWords.json");
 
@@ -52,7 +54,6 @@ const App = () => {
     }
 
     const newColors = [];
-    // const newKeyStatus =
     for (let i = 0; i < 5; i++) {
       if (guess[i] === answer[i]) {
         newColors.push("correct");
@@ -97,14 +98,21 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>WORD RUMMAGE</h1>
+      <h1 className="header">
+        Wordle <FontAwesomeIcon icon={faInfinity} />
+      </h1>
       <div className="Board">
         {rowArr.map((row) => (
-          <InputRow key={row} handleGuess={handleGuess} rowColors={rowColors[row]} active={activeRow === row ? true : false} />
+          <InputRow
+            key={row}
+            handleGuess={handleGuess}
+            rowColors={rowColors[row]}
+            active={activeRow === row ? true : false}
+          />
         ))}
       </div>
       <Keyboard keyStatus={keyStatus} />
-      <h1 style={{ color: "white" }}>{answer}</h1>
+      {/* <h1 style={{ color: "white" }}>{answer}</h1> */}
     </div>
   );
 };

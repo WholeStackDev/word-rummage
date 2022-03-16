@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./keyboard.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Keyboard = ({ keyStatus }) => {
   const press = (keyCode, key) => {
@@ -96,7 +98,7 @@ const Keyboard = ({ keyStatus }) => {
           M
         </div>
         <div onClick={() => press(8, "backspace")} className={`${styles.key} ${styles.keyWide}`}>
-          BACK
+          <FontAwesomeIcon icon={faDeleteLeft} className={styles.backspace} />
         </div>
       </div>
     </div>
