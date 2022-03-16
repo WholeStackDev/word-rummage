@@ -1,7 +1,5 @@
 .container {
   display: flex;
-  flex-grow: 1;
-  max-height: 62px;
   margin-top: 6px;
   align-items: center;
   justify-content: center;
@@ -12,11 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
-  max-width: 62px;
-  height: 100%;
-  /* width: 62px;
-  height: 62px; */
+  width: 62px;
+  height: 62px;
   margin-left: 3px;
   margin-right: 3px;
   line-height: 2rem;
@@ -39,8 +34,8 @@
 
 .empty {
   border: 2px solid rgb(211, 214, 218);
-  /* width: 58px;
-  height: 58px; */
+  width: 58px;
+  height: 58px;
   color: black;
 }
 
